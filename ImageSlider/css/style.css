@@ -1,0 +1,64 @@
+html {
+  background: #d5d5d5;
+}
+
+/*create the slider box frame*/
+.photo-frame {
+  background: #0d0d0d;
+  width: 620px;
+  height: 380px;
+  margin: auto;
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+}
+.photo-frame h1 {
+  color: #7d7d7d;
+}
+
+/*create the slider box*/
+#slider {
+  background: #262626;
+  width: 600px;
+  height: 300px;
+  /*position the slider in the middle*/
+  margin: 10px auto;
+  overflow: hidden;
+  border-radius: 15px;
+  /*expanding to the left animation*/
+  /*expanding to the right animation*/
+  /*move the first image to the left;*/
+  /*move the left image to the right*/
+}
+#slider:hover div {
+  width: 110px;
+  cursor: w-resize;
+}
+#slider:hover div:hover {
+  width: 400px;
+}
+#slider > div:first-child {
+  margin-left: -11%;
+}
+#slider > div:last-child {
+  margin-right: -110%;
+}
+
+.frames {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  width: 30%;
+  height: 100%;
+  float: left;
+  overflow: hidden;
+  border-left: 10px solid #0d0d0d;
+  box-shadow: 0 0 7px rgba(0, 0, 0, 0.9);
+  /*rotate each fram to cretate trapazoidal shaped image frame*/
+  transform: skewX(-20deg);
+  transition: width 1.2s ease-in-out;
+}
+.frames img {
+  margin-left: -55px;
+  /*rotate the image back*/
+  transform: skewX(20deg);
+}
